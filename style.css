@@ -32,13 +32,15 @@ h2 {
 
 .btn-group {
     margin-top: 50px;
+    display: flex;  /* Use flexbox for horizontal layout */
+    justify-content: center;  /* Center buttons horizontally */
     position: relative;
     height: 40px;
 }
 
 button {
     width: 150px;
-    height: inherit;
+    height: 40px;  /* Ensures both buttons have the same height */
     color: white;
     font-size: 1.2em;
     border-radius: 30px;
@@ -48,14 +50,15 @@ button {
     border: 2px solid #e94d58;
 }
 
+/* Yes button styles */
 button.yes-btn {
     background: #e94d58;
 }
 
+/* No button styles with slight offset */
 button.no-btn {
     background: white;
     color: #e94d58;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;  /* Ensure it stays in the normal flow */
+    left: 10px;  /* Add a small gap between buttons */
 }
